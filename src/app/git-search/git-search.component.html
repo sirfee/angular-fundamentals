@@ -1,19 +1,19 @@
 <div *ngIf="searchResults; else elseBlock">
-    <h3>
+    <h3 class="total">
         Total Results: {{searchResults.total_count}}
     </h3>
-    <ul>
-        <li *ngFor="let result of searchResults.items">
+    <ul class="list">
+        <li class="list_item" *ngFor="let result of searchResults.items">
             <a [href]="result.html_url">
-                <img [src]="result.owner.avatar_url" />
-                <h4>
+                <img class="avatar" [src]="result.owner.avatar_url" />
+                <h4 class="title">
                     {{result.name}}
                     <small>
                         by {{result.owner.logon}}
                     </small>
                 </h4>
             </a>
-            <p>
+            <p class="description">
                 {{result.description}}
             </p>
         </li>
