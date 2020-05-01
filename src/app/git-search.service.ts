@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { GitSearch } from './git-search';
 import { GitUserSearch } from './git-user-search';
 import { HttpClient } from '@angular/common/http';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Injectable({
   providedIn: 'root'
