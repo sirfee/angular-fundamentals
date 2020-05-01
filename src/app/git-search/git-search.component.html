@@ -9,12 +9,15 @@
                 <h4 class="title">
                     {{result.name}}
                     <small>
-                        by {{result.owner.logon}}
+                        by {{result.owner.login | uppercase}}
                     </small>
                 </h4>
             </a>
             <p class="description">
                 {{result.description}}
+            </p>
+            <p>
+                Created on {{result.created_at | date:'fullDate'}}
             </p>
         </li>
     </ul>
