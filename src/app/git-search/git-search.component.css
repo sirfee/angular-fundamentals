@@ -10,6 +10,7 @@
     margin-top: 20px;
     padding-top: 10px;
     padding-left: 10px;
+    background-color: white;
 }
 .avatar{
     width: 150px;
@@ -21,4 +22,12 @@
 }
 .description{
     font-size: 18px;
+}
+.list_item_silver{
+    border: 1px solid black;
+    height: 165px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: silver;
 }
