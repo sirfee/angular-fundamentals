@@ -1,6 +1,6 @@
 <input name="query" placeholder="Enter Search Here" [(ngModel)]="searchQuery" />
 <button (click)="gitSearch()">Submit</button>
-<div *ngIf="(searchResults && searchResults.total_count > 0); else loadingBlock;">
+<div *ngIf="(searchResults && searchResults.total_count > 0); else noItemsBlock;">
     <h3 class="total">
         Total Results: {{searchResults.total_count}}
     </h3>
@@ -24,16 +24,15 @@
         </li>
     </ul>
 </div>
-<ng-template #loadingBlock>
-    <ng-container *ngIf="(!searchResults); else noItemsFoundk;">
+<ng-template #noItemsBlock>
+    <ng-container *ngIf="(searchResults); else loadingBlock;">
         <h3 class="title">       
-            Loading...
+            No items found.
         </h3>
     </ng-container>      
 </ng-template>
-<ng-template #noItemsFoundk>
+<ng-template #loadingBlock>
     <h3 class="title">    
-        No items found.
-      </h3>
-  
-</ng-template>
+        Loading...
+    </h3>
+  </ng-template>
