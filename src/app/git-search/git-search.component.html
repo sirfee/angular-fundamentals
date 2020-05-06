@@ -24,6 +24,7 @@
         </li>
     </ul>
 </div>
+
 <ng-template #noItemsBlock>
     <ng-container *ngIf="(searchResults); else loadingBlock;">
         <h3 class="title">       
@@ -31,8 +32,9 @@
         </h3>
     </ng-container>      
 </ng-template>
+
 <ng-template #loadingBlock>
     <h3 class="title">    
         Loading...
     </h3>
-  </ng-template>
+</ng-template>
